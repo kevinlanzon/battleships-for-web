@@ -12,6 +12,12 @@ describe Ship do
 		expect(submarine.length).to eq 2
 	end
 
+	it "knows that its size is 2" do
+		submarine = Ship.submarine
+		expect(submarine.size).to eq 2
+	end
+
+
 	it "knows that a aircraft_carrier has a length of 5" do
 		expect(Ship.aircraft_carrier.length).to eq 5
 	end

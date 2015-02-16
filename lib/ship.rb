@@ -23,7 +23,9 @@ class Ship
 		hits >= length
 	end
 
-private 
+	alias_method :size, :length
+
+private
 
 	def hits
 		@hits

@@ -40,18 +40,18 @@ describe Game do
     end
 
     it "can let a player take a turn" do
-      expect(player_two).to receive(:receive_shoot).with(:A1)
+      expect(player_two).to receive(:receive_shot).with(:A1)
       game.take_turn(:A1)
     end
 
     it 'switches turns after making a turn' do
-      allow(player_two).to receive(:receive_shoot).with(:A1)
+      allow(player_two).to receive(:receive_shot).with(:A1)
       expect(game).to receive(:switch_turn)
       game.take_turn(:A1)
     end
 
     it "does't take a turn if there is a winner" do
-      allow(player_two).to receive(:receive_shoot).with(:A1)
+      allow(player_two).to receive(:receive_shot).with(:A1)
       allow(game).to receive(:over?).and_return true
       expect{game.take_turn(:A1)}.to raise_error "Game is over."
     end

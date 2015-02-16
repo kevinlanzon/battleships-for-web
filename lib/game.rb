@@ -11,7 +11,7 @@ class Game
   end
 
   def switch_turn
-    @turn = @player_one ? @turn = @player_two : @turn = @player_one
+    @turn == @player_one ? @turn = @player_two : @turn = @player_one
   end
 
   def opponent
@@ -21,7 +21,7 @@ class Game
 
   def take_turn(coordinate)
     raise 'Game is over.' if over?
-    opponent.receive_shoot(coordinate)
+    opponent.receive_shot(coordinate)
     switch_turn
   end
 
