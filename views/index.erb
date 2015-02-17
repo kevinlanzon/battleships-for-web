@@ -1,2 +1,13 @@
-<a href="/newgame">New Game!</a>
+<% if @homepage %>
+  <a href="/newgame">New Game!</a>
+<% end %>
 
+<% if @player1 %>
+  Welcome <%= @player1 %>!
+<% else %>
+  <form action="/newgame">
+    Please enter your name:
+    <input type="text" name="Name">
+    <input type="submit">
+  </form>
+<% end %>

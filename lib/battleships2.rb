@@ -2,11 +2,13 @@ require 'sinatra/base'
 
 class BattleShips < Sinatra::Base
   get '/' do
+    @homepage
     erb :index
   end
 
   get '/newgame' do
-    "Please enter your name:"
+    @player1 = params[:Name]
+    erb :index
   end
 
   # start the server if ruby file executed directly
