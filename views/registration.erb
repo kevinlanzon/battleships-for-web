@@ -1,0 +1,21 @@
+<% @player1 = "default" %>
+
+<% if @player1 == nil %>
+  <div align="center">
+  <form action="/registration">
+    You didn't enter a name:
+    <input  type="text" name="Name">
+    <input type="submit" value="Submit">
+  </form>
+  </div>
+<% elsif @player1 != "default" %>
+   Welcome <%= @player1 %>!
+<% else %>
+  <div align="center">
+  <form action="/registration">
+    Please enter your name:
+    <input  type="text" name="Name">
+    <input type="submit" value="Submit">
+  </form>
+  </div>
+<% end %>

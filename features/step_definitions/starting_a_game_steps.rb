@@ -13,5 +13,12 @@ end
 When(/^I enter the name "(.*?)" in "(.*?)"$/) do |player, field|
   fill_in(field, :with => player)
   click_on("Submit")
+end
 
+Given(/^I am on the registration page$/) do
+  visit '/registration'
+end
+
+When(/^I press submit without entering a name$/) do
+  click_on("Submit")
 end

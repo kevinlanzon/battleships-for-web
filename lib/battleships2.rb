@@ -5,9 +5,9 @@ class BattleShips < Sinatra::Base
     erb :index
   end
 
-  get '/newgame' do
+  get '/registration' do
     @player1 = params[:Name]
-    erb :newgame
+    erb :registration
   end
 
   # start the server if ruby file executed directly

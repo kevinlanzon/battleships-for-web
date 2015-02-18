@@ -9,3 +9,9 @@ Feature: Starting the game
     Then I should see "Please enter your name:"
     When I enter the name "John" in "Name"
     Then I should see "Welcome John!"
+
+  Scenario: No Name Input
+    Given I am on the registration page
+    When I press submit without entering a name
+    Then I should see "You didn't enter a name"
+
