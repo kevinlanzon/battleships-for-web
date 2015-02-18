@@ -3,10 +3,14 @@
     Welcome <%= @player1 %>!
   </div>
 <% else %>
-   <form action="/registration">
+   <form action="/registration" method="post">
     Please enter your name:
     <input  type="text" name="Name">
     <input type="submit" value="Submit">
   </form>
   </div>
+<% end %>
+
+<% if @message %>
+  <h1><%= @message %></h1>
 <% end %>
