@@ -12,12 +12,13 @@ class BattleShips < Sinatra::Base
 
   post '/registration' do
     if params[:Name].empty?
-      @message="You didn't enter a name"
+      @message = "You didn't enter a name"
       erb :registration
     else
       @player1 = params[:Name]
       erb :registration
     end
+
   end
 
   # start the server if ruby file executed directly
