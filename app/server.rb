@@ -1,6 +1,14 @@
 require 'sinatra/base'
+require './lib/player'
+require './lib/game'
+require './lib/board'
+require './lib/cell'
+require './lib/ship'
+require './lib/water'
 
 class BattleShips < Sinatra::Base
+
+  grid = Array.new(2) { Array.new(2) { '~' } }
 
   get '/' do
     erb :index
