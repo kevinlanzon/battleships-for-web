@@ -8,7 +8,8 @@ require './lib/water'
 
 class BattleShips < Sinatra::Base
 
-  grid = Array.new(2) { Array.new(2) { '~' } }
+
+  board = Board.new(:size => 2, :content => Cell)
 
   get '/' do
     erb :index
@@ -23,20 +24,20 @@ class BattleShips < Sinatra::Base
       @message = "You didn't enter a name"
       erb :registration
     else
-      player1 = Player.new(name: params[:Name])
+      player1 = Player.new(params[:Name])
       @player1 = player1.name
       erb :registration
     end
   end
 
   get '/play' do
-    @seed_data = grid
+    @seed_data = board
     erb :play
   end
 
   post '/play' do
-    coordinate = params[:coordinate]
-    grid.shoot_at(coordinate)
+    coordinate = params[:coordinate].to_sym
+    board.shoot_at(coordinate)
     redirect '/play'
   end
 

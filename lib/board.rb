@@ -12,7 +12,7 @@ class Board
 	end
 
   def shoot_at(coord)
-    raise "You can't hit the same cell twice" if grid[coord].hit?
+    raise "You can't hit the same cell twice" if grid[coord.to_sym].hit?
     grid[coord].shoot
   end
 
