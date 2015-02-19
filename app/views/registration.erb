@@ -18,6 +18,7 @@
 
   <% if @player1 %>
     Welcome <%= @player1 %>!
+    <a href="/play">Start Game</a>
   <% else %>
     <form action="/registration" method="post">
       Please enter your name:
