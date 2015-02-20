@@ -8,8 +8,8 @@ require './lib/water'
 
 class BattleShips < Sinatra::Base
 
-
   board = Board.new(:size => 2, :content => Cell)
+  game = Game.new
 
   get '/' do
     erb :index
@@ -32,6 +32,9 @@ class BattleShips < Sinatra::Base
 
   get '/play' do
     @seed_data = board
+    ship = Ship.new(1)
+    session[:ship] = ship
+    board.place(ship, :A1)
     erb :play
   end
 
@@ -41,6 +44,5 @@ class BattleShips < Sinatra::Base
     redirect '/play'
   end
 
-  # start the server if ruby file executed directly
   run! if app_file == $0
 end

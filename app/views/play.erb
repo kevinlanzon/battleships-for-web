@@ -1,6 +1,8 @@
 <div align="center">
 
-<table border="2" width="250" cellpadding="10" cellspacing="5" bgcolor="#efefef">
+<h1>BATTLESHIPS</h1>
+
+<table border="4" width="200" cellpadding="20" cellspacing="10" bgcolor="#819FF7">
 
 <tr>
   <th width="15"></th>
@@ -28,4 +30,12 @@
   <input type="submit" value="Fire!">
 </form>
 
+<% if @hit %>
+    <p>HIT!</p>
+<% elsif @hit == false %>
+    <p>MISS!</p>
+<% end %>
+
 </div>
+
+<%= session[:ship].inspect %>
