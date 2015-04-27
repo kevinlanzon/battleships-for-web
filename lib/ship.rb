@@ -30,7 +30,4 @@ private
 	def hits
 		@hits
 	end
-
-
-
 end

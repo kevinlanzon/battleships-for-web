@@ -17,7 +17,6 @@ describe Game do
       game.add_player(player_two)
       expect(game.player_two).to eq player_two
     end
-
   end
 
   context "when game is ready" do
@@ -65,19 +64,9 @@ describe Game do
       expect(game).to be_over
     end
 
-
     it "knows a game is over when  player two has lost" do
       allow(player_two).to receive(:lost?).and_return true
       expect(game).to be_over
     end
-
   end
-
 end
-
-
-
-
-
-
-

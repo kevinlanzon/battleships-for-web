@@ -65,6 +65,4 @@ describe Board do
     board.grid[:A1] = second_cell
     expect(board.floating_ships?).to eq false
   end
-
-
 end

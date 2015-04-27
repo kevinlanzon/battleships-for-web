@@ -1,4 +1,5 @@
 class Board
+
 	attr_reader :grid
 
 	def initialize(options)
@@ -18,9 +19,9 @@ class Board
 
   def place(ship, coordinate, orientation = :horizontally)
     get_coordinates(coordinate, ship.size, orientation).each do |coord|
-      grid[coord].content = ship
-    end
+    grid[coord].content = ship
   end
+end
 
   def get_coordinates(start, size, direction)
     return_array = [start]
@@ -38,5 +39,4 @@ class Board
     end.uniq
     !ship_cells.map(&:content).all?(&:sunk?)
   end
-
 end
