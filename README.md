@@ -1,4 +1,5 @@
 [![Code Climate](https://codeclimate.com/github/kevinlanzon/battleships-for-web/badges/gpa.svg)](https://codeclimate.com/github/kevinlanzon/battleships-for-web)
+[![Build Status](https://travis-ci.org/kevinlanzon/battleships-for-web.svg?branch=master)](https://travis-ci.org/kevinlanzon/battleships-for-web)
 
 Battleships for Web
 =================
