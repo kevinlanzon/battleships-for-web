@@ -4,7 +4,7 @@
 Battleships for Web
 =================
 
-[Makers Academy](http://www.makersacademy.com/) Week 3 Project - Pair programmed with [Costas](https://github.com/costassarris).
+[Makers Academy](http://www.makersacademy.com/) Week 3 Project - Paired with [Costas](https://github.com/costassarris).
 
 In this project we had to improve on our first battleships game which we tried to implement for the terminal.
 
