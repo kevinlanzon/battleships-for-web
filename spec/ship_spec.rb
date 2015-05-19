@@ -1,10 +1,10 @@
 require 'ship'
 
 describe Ship do
-	let(:ship){Ship.new}
+  let(:ship){Ship.new}
 
-	it "knows how big it is" do
-		expect(ship.length).to eq 3
+  it "knows how big it is" do
+    expect(ship.length).to eq 3
 	end
 
 	it "knows that a submarine is 2" do

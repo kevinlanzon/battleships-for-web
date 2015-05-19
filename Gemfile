@@ -1,4 +1,4 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 gem 'sinatra'
 
 group :development, :test do
@@ -8,4 +8,5 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec'
   gem 'shotgun'
+  gem 'rubocop'
 end
